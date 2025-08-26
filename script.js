@@ -29,21 +29,33 @@ const typeColors = {
 
 // Tableau d'objets représentant les Pokémon
 const pokemons = [
-    { name: 'Pikachu', type: 'Électrique', level: 35, img: 'pikachu.png' },
-    { name: 'Bulbizarre', type: 'Plante,Poison', level: 15, img: 'bulbizarre.png' },
-    { name: 'Salamèche', type: 'Feu', level: 20, img: 'salameche.png' },
-    { name: 'Carapuce', type: 'Eau', level: 10, img: 'carapuce.png' },
-    { name: 'Rondoudou', type: 'Normal,Fée', level: 25, img: 'rondoudou.png' },
-    { name: 'Ectoplasma', type: 'Spectre,Poison', level: 45, img: 'ectoplasma.png' },
-    { name: 'Évoli', type: 'Normal,Combat', level: 22, img: 'evoli.png' },
-    { name: 'Dracaufeu', type: 'Feu,Vol', level: 50, img: 'dracaufeu.png' },
-    { name: 'Florizarre', type: 'Plante,Poison', level: 55, img: 'florizarre.png' },
-    { name: 'Tortank', type: 'Eau', level: 52, img: 'tortank.png' },
-    { name: 'Mélofée', type: 'Fée', level: 18, img: 'melofee.png' },
-    { name: 'Raichu', type: 'Électrique', level: 40, img: 'raichu.png' },
-    { name: 'Magicarpe', type: 'Eau', level: 5, img: 'magicarpe.png' },
-    { name: 'Lokhlass', type: 'Eau,Glace', level: 35, img: 'lokhlass.png' },
-    { name: 'Onix', type: 'Roche,Sol', level: 30, img: 'onix.png' },
-    { name: 'Ronflex', type: 'Normal', level: 45, img: 'ronflex.png' },
-    { name: 'Mewtwo', type: 'Psy', level: 70, img: 'mewtwo.png' }
+    {name: 'Pikachu', type: 'Électrique', level: 35, img: 'pikachu.png'},
+    {name: 'Bulbizarre', type: 'Plante,Poison', level: 15, img: 'bulbizarre.png'},
+    {name: 'Salamèche', type: 'Feu', level: 20, img: 'salameche.png'},
+    {name: 'Carapuce', type: 'Eau', level: 10, img: 'carapuce.png'},
+    {name: 'Rondoudou', type: 'Normal,Fée', level: 25, img: 'rondoudou.png'},
+    {name: 'Ectoplasma', type: 'Spectre,Poison', level: 45, img: 'ectoplasma.png'},
+    {name: 'Évoli', type: 'Normal,Combat', level: 22, img: 'evoli.png'},
+    {name: 'Dracaufeu', type: 'Feu,Vol', level: 50, img: 'dracaufeu.png'},
+    {name: 'Florizarre', type: 'Plante,Poison', level: 55, img: 'florizarre.png'},
+    {name: 'Tortank', type: 'Eau', level: 52, img: 'tortank.png'},
+    {name: 'Mélofée', type: 'Fée', level: 18, img: 'melofee.png'},
+    {name: 'Raichu', type: 'Électrique', level: 40, img: 'raichu.png'},
+    {name: 'Magicarpe', type: 'Eau', level: 5, img: 'magicarpe.png'},
+    {name: 'Lokhlass', type: 'Eau,Glace', level: 35, img: 'lokhlass.png'},
+    {name: 'Onix', type: 'Roche,Sol', level: 30, img: 'onix.png'},
+    {name: 'Ronflex', type: 'Normal', level: 45, img: 'ronflex.png'},
+    {name: 'Mewtwo', type: 'Psy', level: 70, img: 'mewtwo.png'}
 ];
+// Stockage des références aux éléments HTML
+const pokemonEL = document.querySelector("div.pokemon-container");
+
+function displayPokemons() {
+    for (let pokemon of pokemons) {
+        let cartePokemon = `<p> ${pokemon.name} </p>`;
+        pokemonEL.innerHTML += cartePokemon;
+
+    }
+}
+
+displayPokemons();
